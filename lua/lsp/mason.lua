@@ -4,8 +4,37 @@ return {
 		opts = {},
 	},
 	{
+		"jay-babu/mason-null-ls.nvim",
+		event = { "BufReadPre", "BufNewFile" },
+		dependencies = {
+			"williamboman/mason.nvim",
+			"nvimtools/none-ls.nvim",
+		},
+		config = function()
+			require("mason-null-ls").setup({
+				automatic_installation = true,
+				ensure_installed = {
+					"stylua",
+					"prettier",
+					"prettierd",
+					"gofumpt",
+					"goimports",
+					"google-java-format",
+				},
+			})
+		end,
+	},
+	{
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
+			require("mason-lspconfig").setup({
+				automatic_installation = true,
+				ensure_installed = {
+					"lua_ls",
+					"tsserver",
+					"gopls",
+				},
+			})
 			require("mason-lspconfig").setup_handlers({
 				function(server_name)
 					local skip_servers = {

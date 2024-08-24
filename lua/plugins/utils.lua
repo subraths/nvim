@@ -24,12 +24,6 @@ return {
 		end,
 	},
 	{
-		"dstein64/nvim-scrollview",
-		opts = {
-			excluded_filetypes = { "neo-tree" },
-		},
-	},
-	{
 		"chrisgrieser/nvim-spider",
 		lazy = true,
 		keys = {
