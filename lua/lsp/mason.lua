@@ -31,6 +31,7 @@ return {
 				automatic_installation = true,
 				ensure_installed = {
 					"lua_ls",
+					"rust_analyzer",
 					"tsserver",
 					"gopls",
 				},
@@ -68,9 +69,6 @@ return {
 				-- 		},
 				-- 	})
 				-- end,
-				["rust_analyzer"] = function()
-					require("rust-tools").setup({})
-				end,
 			})
 		end,
 	},
