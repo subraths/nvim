@@ -91,10 +91,10 @@ return {
 						return vim_item
 					end,
 				},
-				window = {
-					documentation = cmp.config.window.bordered(),
-					completion = cmp.config.window.bordered(),
-				},
+				-- window = {
+				-- 	documentation = cmp.config.window.bordered(),
+				-- 	completion = cmp.config.window.bordered(),
+				-- },
 				preselect = cmp.PreselectMode.None,
 				completion = {
 					completeopt = "menu,menuone,preview",

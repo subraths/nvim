@@ -46,7 +46,7 @@ return {
 -- 					vim.fn.expand("~/.local/share/nvim/mason/packages/jdtls/config_linux"),
 --
 -- 					"-data",
--- 					vim.fn.expand("~/.cache/jdtls/workspace") .. project_name,
+-- 					vim.fn.expand("~/.cache/jdtls/workspace/") .. project_name,
 -- 				},
 --
 -- 				-- 💀

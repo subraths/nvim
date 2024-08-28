@@ -15,11 +15,15 @@ return {
 				automatic_installation = true,
 				ensure_installed = {
 					"stylua",
+					"shfmt",
 					"prettier",
 					"prettierd",
 					"gofumpt",
 					"goimports",
 					"google-java-format",
+
+					"java-debug-adapter",
+					"java-test",
 				},
 			})
 		end,
@@ -34,6 +38,7 @@ return {
 					"rust_analyzer",
 					"tsserver",
 					"gopls",
+					"jsonls",
 				},
 			})
 			require("mason-lspconfig").setup_handlers({

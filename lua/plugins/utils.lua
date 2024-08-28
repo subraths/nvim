@@ -1,5 +1,14 @@
 return {
 	{
+		"norcalli/nvim-colorizer.lua",
+		config = function()
+			require("colorizer").setup()
+		end,
+	},
+	-- make netrw look better
+	{ "prichrd/netrw.nvim", opts = {} },
+
+	{
 		"numToStr/Comment.nvim",
 		opts = {},
 		lazy = false,
@@ -43,11 +52,6 @@ return {
 				mode = { "n", "o", "x" },
 			},
 		},
-	},
-	{
-		"chrisgrieser/nvim-various-textobjs",
-		event = "UIEnter",
-		opts = { useDefaultKeymaps = true },
 	},
 	{ "echasnovski/mini.surround", version = "*", opts = {} },
 }
