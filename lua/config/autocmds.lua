@@ -109,7 +109,7 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 --	"CursorMoved",
 --	"InsertLeave",
 
-	-- include this if you have set `show_modified` to `true`
+-- include this if you have set `show_modified` to `true`
 --	"BufModifiedSet",
 --}, {
 --	group = vim.api.nvim_create_augroup("barbecue.updater", {}),

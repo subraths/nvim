@@ -36,7 +36,6 @@ return {
 			handlebars = { "prettierd", "prettier" },
 			kotlin = { "ktfmt" },
 			rust = { "rustfmt" },
-			dart = { "dcm" },
 
 			-- Use the "*" filetype to run formatters on all filetypes.
 			["*"] = { "codespell" },
