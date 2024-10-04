@@ -1,17 +1,10 @@
 return {
 	{
 		"mfussenegger/nvim-dap",
-		keys = {
-			{
-				"<leader>b",
-				function()
-					require("dap").toggle_breakpoint()
-				end,
-				"Toggle breakpoint",
-			},
-		},
 		config = function()
 			local dap = require("dap")
+			local dapui = require("dapui")
+
 			dap.adapters["node2"] = {
 				type = "executable",
 				command = "node",
@@ -32,6 +25,32 @@ return {
 					console = "integratedTerminal",
 				},
 			}
+
+			-- dap.listeners.before.attach.dapui_config = function()
+			-- 	dapui.open()
+			-- end
+			-- dap.listeners.before.launch.dapui_config = function()
+			-- 	dapui.open()
+			-- end
+			-- dap.listeners.before.event_terminated.dapui_config = function()
+			-- 	dapui.close()
+			-- end
+			-- dap.listeners.before.event_exited.dapui_config = function()
+			-- 	dapui.close()
+			-- end
+
+			vim.keymap.set("n", "<C-S-i>", function()
+				dap.step_into()
+			end)
+			vim.keymap.set("n", "<C-S-o>", function()
+				dap.step_over()
+			end)
+			vim.keymap.set("n", "<C-S-p>", function()
+				dap.continue()
+			end)
+			vim.keymap.set("n", "<leader>b", function()
+				dap.toggle_breakpoint()
+			end)
 		end,
 	},
 	{
@@ -85,10 +104,13 @@ return {
 	},
 	{
 		"theHamsta/nvim-dap-virtual-text",
-		opts = {},
-	},
-	{
-		"niuiic/dap-utils.nvim",
+		opts = {
+			highlight_changed_variables = false,
+		},
+		dependencies = {
+			"mfussenegger/nvim-dap",
+			"nvim-treesitter/nvim-treesitter",
+		},
 	},
 	-- dap config for golang
 	{

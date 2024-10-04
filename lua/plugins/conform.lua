@@ -1,7 +1,12 @@
 return {
 	"stevearc/conform.nvim",
+	---@module "conform"
+	---@type conform.setupOpts
 	opts = {
-		stop_after_first = true,
+		format_on_save = {
+			timeout_ms = 5000,
+		},
+
 		formatters_by_ft = {
 			bash = { "shfmt" },
 			sh = { "shfmt" },
@@ -9,10 +14,11 @@ return {
 			-- Conform will run multiple formatters sequentially
 			python = { "isort", "black" },
 			-- Use a sub-list to run only the first available formatter
-			javascript = { "prettierd", "prettier" },
-			javascriptreact = { "prettierd", "prettier" },
-			typescript = { "prettierd", "prettier" },
+			javascript = { "prettierd" },
+			javascriptreact = { "prettierd" },
+			typescript = { "prettierd" },
 			typescriptreact = { "prettierd", "prettier" },
+			svelte = { "prettierd" },
 			cpp = { "clang-format" },
 			java = { "google-java-format" },
 			css = { "prettierd", "prettier" },
@@ -28,11 +34,14 @@ return {
 			["markdown.mdx"] = { "prettierd", "prettier" },
 			graphql = { "prettierd", "prettier" },
 			handlebars = { "prettierd", "prettier" },
+			kotlin = { "ktfmt" },
+			rust = { "rustfmt" },
+			dart = { "dcm" },
 
 			-- Use the "*" filetype to run formatters on all filetypes.
 			["*"] = { "codespell" },
 
-			-- Use the "_" filetype to run formatters on filetypes that don't
+			-- Use the "_" filetype to run formatters on filetypes that don't.
 			-- have other formatters configured.
 			["_"] = { "trim_whitespace" },
 		},

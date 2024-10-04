@@ -1,3 +1,5 @@
+local opts = vim.o
+
 vim.g.mapleader = " "
 vim.o.clipboard = "unnamedplus"
 vim.o.number = true
@@ -13,6 +15,10 @@ vim.o.expandtab = true
 vim.o.grepprg = "rg --vimgrep"
 vim.o.ignorecase = true
 vim.o.scrolloff = 3
+vim.o.textwidth = 0
+opts.wrapmargin = 1
+vim.cmd("set formatoptions+=t")
+vim.cmd("set formatoptions-=l")
 
 vim.opt.fillchars:append({ eob = " " })
 

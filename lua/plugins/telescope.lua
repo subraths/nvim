@@ -9,6 +9,7 @@ return {
 			vim.keymap.set("n", "<leader><space>", builtin.find_files, {})
 			vim.keymap.set("n", "fg", builtin.live_grep, {})
 			vim.keymap.set("n", "<C-b>", builtin.buffers, {})
+			vim.keymap.set("n", "fo", builtin.oldfiles, {})
 			vim.keymap.set("n", "gr", builtin.lsp_references, {})
 			vim.keymap.set("n", "gd", builtin.lsp_definitions, {})
 
