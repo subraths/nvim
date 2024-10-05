@@ -3,11 +3,12 @@ return {
 	---@module "conform"
 	---@type conform.setupOpts
 	opts = {
+
 		format_on_save = {
-			lsp_format = "fallback",
-			timeout_ms = 500, -- Increased timeout for larger files
+			timeout_ms = 5000, -- Increased timeout for larger files
 		},
 		formatters_by_ft = {
+			dart = { lsp_format = "first" },
 			bash = { "shfmt" },
 			lua = { "stylua" },
 			python = { "isort", "black" },
