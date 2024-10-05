@@ -117,3 +117,13 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 --		require("barbecue.ui").update()
 --	end,
 --})
+
+-- vim.api.nvim_create_autocmd("BufWritePost", {
+-- 	pattern = "*.dart",
+-- 	callback = function()
+-- 		local current_file = vim.fn.expand("%:p")
+--
+-- 		vim.fn.system("dart format " .. current_file)
+-- 		print("format succeed " .. current_file)
+-- 	end,
+-- })
