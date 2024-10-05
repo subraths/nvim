@@ -5,7 +5,7 @@ return {
 	opts = {
 		format_on_save = {
 			lsp_format = "fallback",
-			timeout_ms = 1000, -- Increased timeout for larger files
+			timeout_ms = 500, -- Increased timeout for larger files
 		},
 		formatters_by_ft = {
 			bash = { "shfmt" },
