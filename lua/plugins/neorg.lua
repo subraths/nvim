@@ -26,22 +26,4 @@ return {
 			})
 		end,
 	},
-	-- {
-	-- 	"nvim-neorg/neorg",
-	-- 	build = false, -- disable the build script that currently uses luarocks.nvim
-	-- 	opts = {
-	-- 		load = {
-	-- 			["core.defaults"] = {},
-	-- 			["core.concealer"] = {},
-	-- 			["core.dirman"] = {
-	-- 				config = {
-	-- 					workspaces = {
-	-- 						notes = "~/notes",
-	-- 					},
-	-- 					default_workspace = "notes",
-	-- 				},
-	-- 			},
-	-- 		},
-	-- 	},
-	-- },
 }
