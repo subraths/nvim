@@ -20,6 +20,9 @@ opts.wrapmargin = 1
 vim.cmd("set formatoptions+=t")
 vim.cmd("set formatoptions-=l")
 
+-- disable zig auto format on save
+vim.g.zig_fmt_autosave = 0
+
 vim.opt.fillchars:append({ eob = " " })
 
 -- You will likely want to reduce updatetime which affects CursorHold
