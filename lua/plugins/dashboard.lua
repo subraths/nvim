@@ -13,13 +13,13 @@ return {
 		"Shatur/neovim-session-manager",
 		keys = {
 			{
-				"ls",
+				"<leader>ls",
 				function()
 					require("session_manager").load_session(false)
 				end,
 			},
 			{
-				"sm",
+				"<leader>sm",
 				"<cmd>SessionManager<cr>",
 			},
 		},

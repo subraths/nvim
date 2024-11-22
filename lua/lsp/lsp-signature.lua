@@ -9,8 +9,8 @@ return {
 			},
 			floating_window = true,
 
-			-- disable virtual text
-			hint_enable = false,
+			-- virtual text
+			hint_enable = true,
 		},
 	},
 	-- {
