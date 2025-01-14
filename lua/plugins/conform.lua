@@ -18,6 +18,7 @@ return {
 			typescriptreact = { "prettierd" },
 			svelte = { "prettierd" },
 			cpp = { "clang-format" },
+			c = { "clang-format" },
 			java = { "google-java-format" },
 			css = { "prettierd" },
 			go = { "gofumpt", "goimports", "goimports-reviser" },

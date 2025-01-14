@@ -2,7 +2,7 @@ return {
 	"nvim-java/nvim-java",
 	opts = {
 		spring_boot_tools = {
-			enable = true,
+			enable = false,
 		},
 
 		jdk = {
