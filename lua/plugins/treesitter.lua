@@ -40,6 +40,7 @@ return {
 			})
 		end,
 	},
-	"filNaj/tree-setter",
+	--  A treesitter-module which will place equals, semicolons, commas and double points automatically for you!
+	-- "filNaj/tree-setter",
 	"nvim-treesitter/playground",
 }
