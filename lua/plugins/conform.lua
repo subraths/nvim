@@ -12,6 +12,7 @@ return {
 			bash = { "shfmt" },
 			lua = { "stylua" },
 			python = { "isort", "black" },
+			js = { "prettier", "prettierd" },
 			javascript = { "prettierd" },
 			javascriptreact = { "prettierd" },
 			typescript = { "prettierd" },
